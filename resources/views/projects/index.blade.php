@@ -123,7 +123,7 @@
             
             <td>
               @if($project->status === "pending")
-                  <i class="fa fa-pencil-square-o btn btn-primary edit-btn"></i>
+                  <i class="fa fa-check-square-o btn btn-primary edit-btn"></i>
               @else
                   <!-- Show a blank td if the status is not pending -->
               @endif
