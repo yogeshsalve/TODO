@@ -122,7 +122,11 @@
             <td>{{ $project->status }}</td>
             
             <td>
-              <i class="fa fa-pencil-square-o btn btn-primary edit-btn"></i> 
+              @if($project->status === "pending")
+                  <i class="fa fa-pencil-square-o btn btn-primary edit-btn"></i>
+              @else
+                  <!-- Show a blank td if the status is not pending -->
+              @endif
               <i class="fa fa-close btn btn-danger ms-2 delete-btn"></i>
           </td>
         </tr>
