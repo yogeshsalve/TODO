@@ -23,10 +23,8 @@
   }
 
   .container {
-    max-width: 600px;
-    /* margin: 0 auto; */
+    max-width: 600px;   
     margin-top: 200px;
-
     background: #fff;
     padding: 20px;
     border-radius: 8px;
@@ -83,10 +81,7 @@
 </head>
 
 <body>
-  <div class="container">
-    {{-- <h4><b>PHP - Simple To Do List App</b> <button id="toggle-status" class="btn btn-secondary" data-show-pending="{{ $showPending === 'all' ? 'true' : 'false' }}">
-      {{ $showPending === 'all' ? 'Show Pending Tasks' : 'Show All Tasks' }}
-  </button></h4> --}}
+  <div class="container">   
   <h4 class="header">
     <b>PHP - Simple To Do List App</b>
     <button id="toggle-status" class="btn btn-secondary" data-show-pending="{{ $showPending === 'all' ? 'true' : 'false' }}">
@@ -96,16 +91,14 @@
     <hr>
 
     <form data-action="{{ route('projects.store') }}" method="POST" enctype="multipart/form-data" id="add-project-form">
-      <!-- Modal body -->
+     
       <div class="modal-body">
         @csrf
         <div class="task-input">
           <input type="text" id="title"   name="title" class="form-control" style="display: inline-block; width: auto;">
           <button id="addTaskButton" type="submit" class="btn btn-primary">Add Task</button>
         </div>
-
       </div>
-
     </form>
 
 
@@ -145,12 +138,4 @@
     <script src="{{ asset('js/projects.js') }}" defer></script>
 
   </body>
-
-
-
-
 </html>
-
-<script>
-  
-</script>
